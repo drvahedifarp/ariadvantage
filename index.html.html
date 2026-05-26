@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payman Vahedifar, MD | Nephrologist & Internal Medicine | Century City, Los Angeles</title>
+<meta name="description" content="Dr. Payman Vahedifar is a board-certified nephrologist and internal medicine physician in Century City, Los Angeles. Specializing in chronic kidney disease, hypertension, and diabetes. Same-week appointments. Most insurances accepted.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1f2e;
+    --deep-blue: #162840;
+    --mid-blue: #1e3a52;
+    --gold: #c9a96e;
+    --gold-light: #e2c99a;
+    --cream: #f8f4ef;
+    --white: #ffffff;
+    --text-muted: #8a9bb0;
+    --border: rgba(201, 169, 110, 0.2);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 31, 46, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+  }
+
+  .logo span {
+    display: block;
+    font-size: 0.7rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 2px;
+  }
+
+  nav { display: flex; gap: 2.5rem; align-items: center; }
+
+  nav a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.3s;
+  }
+
+  nav a:hover { color: var(--gold); }
+
+  .btn-call {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2px;
+    font-weight: 500 !important;
+    letter-spacing: 0.08em !important;
+    transition: background 0.3s !important;
+  }
+
+  .btn-call:hover { background: var(--gold-light) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: 30%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 4rem 6rem 4rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.4s forwards;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.6);
+    max-width: 420px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.6s forwards;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.8s forwards;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border: 1px solid rgba(201,169,110,0.4);
+    color: var(--gold-light);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: border-color 0.3s, color 0.3s;
+  }
+
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--navy) 0%, transparent 40%);
+    z-index: 1;
+  }
+
+  .hero-image-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(15,31,46,0.3) 0%, rgba(15,31,46,0.1) 100%),
+      url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80') center/cover no-repeat;
+  }
+
+  .hero-stats {
+    position: absolute;
+    bottom: 3rem;
+    left: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 1s forwards;
+  }
+
+  .stat {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+    padding: 1.2rem 1.8rem;
+    border-radius: 4px;
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-top: 0.3rem;
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--deep-blue);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 1.2rem 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .trust-item svg { color: var(--gold); flex-shrink: 0; }
+
+  /* ── SECTION BASE ── */
+  section { padding: 6rem 4rem; }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title em { font-style: italic; }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: #4a5a6a;
+    margin-bottom: 1.2rem;
+    font-weight: 300;
+  }
+
+  .about-credentials {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .credential {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f0ece7;
+  }
+
+  .credential-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 0.4rem;
+    flex-shrink: 0;
+  }
+
+  .credential-text {
+    font-size: 0.85rem;
+    color: #5a6a7a;
+    line-height: 1.5;
+  }
+
+  .credential-text strong {
+    display: block;
+    color: var(--navy);
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+  }
+
+  .about-image-wrap {
+    position: relative;
+  }
+
+  .about-image {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .about-image-placeholder {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, var(--deep-blue) 0%, var(--mid-blue) 100%);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .about-image-placeholder svg { color: var(--gold); opacity: 0.5; }
+
+  .about-image-placeholder p {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .about-tag {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .about-tag-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .about-tag-text {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+  }
+
+  /* ── SERVICES ── */
+  .services {
+    background: var(--cream);
+  }
+
+  .services-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+    margin-bottom: 4rem;
+  }
+
+  .services-intro {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #6a7a8a;
+    font-weight: 300;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: #e8e0d8;
+    border: 1.5px solid #e8e0d8;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .service-card {
+    background: var(--white);
+    padding: 2.5rem;
+    transition: background 0.3s;
+    position: relative;
+  }
+
+  .service-card:hover { background: var(--navy); }
+  .service-card:hover .service-icon { color: var(--gold); }
+  .service-card:hover .service-name { color: var(--white); }
+  .service-card:hover .service-desc { color: rgba(255,255,255,0.5); }
+
+  .service-icon {
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    transition: color 0.3s;
+  }
+
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.8rem;
+    transition: color 0.3s;
+    line-height: 1.3;
+  }
+
+  .service-desc {
+    font-size: 0.83rem;
+    line-height: 1.7;
+    color: #7a8a9a;
+    font-weight: 300;
+    transition: color 0.3s;
+  }
+
+  /* ── INSURANCE ── */
+  .insurance {
+    background: var(--deep-blue);
+    text-align: center;
+    padding: 5rem 4rem;
+  }
+
+  .insurance .section-title { color: var(--white); }
+
+  .insurance-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+
+  .insurance-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+
+  .insurance-tag {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    color: rgba(255,255,255,0.7);
+    padding: 0.6rem 1.4rem;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .insurance-note {
+    font-size: 0.8rem;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+  }
+
+  /* ── LOCATION ── */
+  .location {
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 500px;
+  }
+
+  .location-info {
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .location-detail {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+  }
+
+  .location-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(201,169,110,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--gold);
+  }
+
+  .location-text strong {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+
+  .location-text p {
+    font-size: 0.9rem;
+    color: #5a6a7a;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .location-map {
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .location-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: none;
+    filter: grayscale(30%) contrast(1.1);
+  }
+
+  /* ── CTA ── */
+  .cta {
+    background: var(--navy);
+    text-align: center;
+    padding: 7rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta .section-title { color: var(--white); }
+
+  .cta-subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+
+  .cta-phone {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--gold);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+
+  .cta-phone:hover { color: var(--gold-light); }
+
+  .cta-hours {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-address {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0a1520;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(201,169,110,0.1);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    header { padding: 1rem 1.5rem; }
+    nav { display: none; }
+    section { padding: 4rem 1.5rem; }
+
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .hero-left { padding: 8rem 1.5rem 3rem; }
+    .hero-right { min-height: 300px; }
+    .hero-stats { display: none; }
+
+    .trust-bar { padding: 1rem 1.5rem; gap: 1.5rem; }
+
+    .about { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
+    .about-tag { right: 0; bottom: -1rem; }
+
+    .services-header { grid-template-columns: 1fr; gap: 1.5rem; }
+    .services-grid { grid-template-columns: 1fr; }
+
+    .location { grid-template-columns: 1fr; }
+    .location-info { padding: 3rem 1.5rem; }
+
+    .insurance { padding: 4rem 1.5rem; }
+
+    .cta { padding: 5rem 1.5rem; }
+    .cta-phone { font-size: 2rem; }
+
+    footer { padding: 1.5rem; flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    Payman Vahedifar, MD
+    <span>Nephrology · Internal Medicine</span>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#location">Location</a>
+    <a href="tel:3102880808" class="btn-call">Call (310) 288-0808</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Century City, Los Angeles</p>
+    <h1>Expert Care for<br><em>Kidney & Internal</em><br>Medicine</h1>
+    <p class="hero-desc">Board-certified nephrologist and internist providing personalized care for chronic kidney disease, hypertension, diabetes, and complex medical conditions. Same-week appointments available.</p>
+    <div class="hero-actions">
+      <a href="tel:3102880808" class="btn-primary">Call (310) 288-0808</a>
+      <a href="#services" class="btn-secondary">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-image-bg"></div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5.0★</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    Same-Week Appointments
+  </div>
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    Medicare Accepted
+  </div>
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    Most Major Insurances
+  </div>
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    UCLA Trained Physician
+  </div>
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    Cedars-Sinai Affiliated
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-text">
+    <p class="section-label">About Dr. Vahedifar</p>
+    <h2 class="section-title">Personalized Care<br>You Can <em>Trust</em></h2>
+    <p>Dr. Payman Vahedifar is a board-certified internist and nephrologist serving patients in Century City, Beverly Hills, West Los Angeles, Santa Monica, and Culver City. With over 20 years of experience, he provides attentive, individualized care for adults and seniors.</p>
+    <p>Dr. Vahedifar trained at UCLA and brings subspecialty expertise in kidney disease, resistant hypertension, and diabetes-related conditions. Patients choose this practice for detailed evaluation, same-week availability, and direct access to their physician.</p>
+    <div class="about-credentials">
+      <div class="credential">
+        <div class="credential-dot"></div>
+        <div class="credential-text">
+          <strong>Board Certified</strong>
+          Nephrology & Internal Medicine
+        </div>
+      </div>
+      <div class="credential">
+        <div class="credential-dot"></div>
+        <div class="credential-text">
+          <strong>Education</strong>
+          University of California, Los Angeles (UCLA)
+        </div>
+      </div>
+      <div class="credential">
+        <div class="credential-dot"></div>
+        <div class="credential-text">
+          <strong>Hospital Affiliation</strong>
+          Cedars-Sinai Medical Center, Century City
+        </div>
+      </div>
+      <div class="credential">
+        <div class="credential-dot"></div>
+        <div class="credential-text">
+          <strong>NPI</strong>
+          #1275522096
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about-image-wrap">
+    <div class="about-image-placeholder">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <p>Doctor Photo</p>
+    </div>
+    <div class="about-tag">
+      <div class="about-tag-num">20+</div>
+      <div class="about-tag-text">Years<br>Experience</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header">
+    <div>
+      <p class="section-label">Specialties</p>
+      <h2 class="section-title">Comprehensive<br><em>Medical Services</em></h2>
+    </div>
+    <p class="services-intro">From chronic kidney disease management to annual physicals and surgical clearance, Dr. Vahedifar provides expert care across a broad range of internal medicine and nephrology conditions.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div class="service-name">Chronic Kidney Disease</div>
+      <div class="service-desc">Comprehensive management of CKD, elevated creatinine, proteinuria, and diabetic kidney disease. Slowing progression and preserving kidney function.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="service-name">Resistant Hypertension</div>
+      <div class="service-desc">Expert evaluation and management of difficult-to-control high blood pressure, including secondary causes and end-organ protection strategies.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <div class="service-name">Diabetes Management</div>
+      <div class="service-desc">Type 2 diabetes care including medication review, labs, kidney health monitoring, and comprehensive chronic disease management.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="service-name">Internal Medicine</div>
+      <div class="service-desc">Primary care for adults and seniors including chronic disease management, preventive care, and coordination of complex medical conditions.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div class="service-name">Annual Physicals</div>
+      <div class="service-desc">Comprehensive annual exams and Medicare wellness visits including labs, screenings, and preventive health evaluations.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <div class="service-name">Pre-Op Clearance</div>
+      <div class="service-desc">Same-week pre-operative medical clearance including ECG, labs, risk assessment, and surgical coordination for upcoming procedures.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INSURANCE -->
+<section class="insurance">
+  <p class="section-label" style="color:var(--gold)">Accepted Insurance</p>
+  <h2 class="section-title">Most Major Plans <em>Accepted</em></h2>
+  <p class="insurance-subtitle">We work with most major insurance carriers including Medicare. Call our office to verify your specific plan.</p>
+  <div class="insurance-grid">
+    <div class="insurance-tag">Medicare</div>
+    <div class="insurance-tag">BlueCross BlueShield</div>
+    <div class="insurance-tag">Anthem Blue Cross</div>
+    <div class="insurance-tag">Cigna</div>
+    <div class="insurance-tag">UnitedHealthcare</div>
+    <div class="insurance-tag">Aetna</div>
+    <div class="insurance-tag">Health Net</div>
+    <div class="insurance-tag">Most PPO Plans</div>
+  </div>
+  <p class="insurance-note">Call (310) 288-0808 to verify your insurance</p>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="location-info">
+    <p class="section-label">Find Us</p>
+    <h2 class="section-title">Conveniently Located in<br><em>Century City</em></h2>
+
+    <div class="location-detail">
+      <div class="location-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="location-text">
+        <strong>Address</strong>
+        <p>2080 Century Park East, Suite 1410<br>Los Angeles, CA 90067<br>Century City Medical Plaza</p>
+      </div>
+    </div>
+
+    <div class="location-detail">
+      <div class="location-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.95 3.38 2 2 0 0 1 3.92 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.91 6.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <div class="location-text">
+        <strong>Phone</strong>
+        <p><a href="tel:3102880808" style="color:inherit;text-decoration:none;">(310) 288-0808</a></p>
+      </div>
+    </div>
+
+    <div class="location-detail">
+      <div class="location-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="location-text">
+        <strong>Office Hours</strong>
+        <p>Monday – Friday: 9:00 AM – 4:00 PM<br>Closed weekends & major holidays</p>
+      </div>
+    </div>
+
+    <div class="location-detail">
+      <div class="location-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <div class="location-text">
+        <strong>Parking</strong>
+        <p>Easy parking available at Century City Medical Plaza. Validated parking available.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="location-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.4!2d-118.4154!3d34.0584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s2080+Century+Park+East%2C+Los+Angeles%2C+CA+90067!5e0!3m2!1sen!2sus!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Office Location">
+    </iframe>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <p class="section-label">Get In Touch</p>
+  <h2 class="section-title" style="color:var(--white);">Ready to Schedule Your<br><em>Appointment?</em></h2>
+  <p class="cta-subtitle">Same-week appointments available for new patients. Call our office directly to speak with our staff and schedule your visit.</p>
+  <a href="tel:3102880808" class="cta-phone">(310) 288-0808</a>
+  <p class="cta-hours">Monday – Friday &nbsp;·&nbsp; 9:00 AM – 4:00 PM</p>
+  <a href="tel:3102880808" class="btn-primary" style="display:inline-block;margin-bottom:2rem;">Call Now</a>
+  <p class="cta-address">2080 Century Park East, Suite 1410 · Los Angeles, CA 90067</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Payman Vahedifar, MD</div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#location">Location</a>
+    <a href="tel:3102880808">(310) 288-0808</a>
+  </div>
+  <p class="footer-copy">© 2026 Payman Vahedifar, MD. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
