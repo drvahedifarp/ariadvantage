@@ -303,7 +303,28 @@
     color: rgba(255,255,255,0.5);
     margin-top: 0.3rem;
   }
+  .service-area {
+  background: var(--white);
+  padding: 3rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid #f0ece7;
+}
 
+.service-area h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 300;
+  color: var(--navy);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .service-area {
+    padding: 2.5rem 1.5rem;
+  }
+}
   /* ── TRUST BAR ── */
   .trust-bar {
     background: var(--deep-blue);
@@ -850,10 +871,13 @@
   </div>
   <div class="trust-item">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-    Cedars-Sinai Affiliated
+    Cedars-Sinai Hospital, California Rehab Institution and Providence Saint John's Health Center Affiliations
   </div>
 </div>
-
+<section class="service-area">
+  <p class="section-label">Convenient Westside Location</p>
+  <h2>Serving patients in Century City, Beverly Hills, West Los Angeles, Santa Monica & Culver City</h2>
+</section>
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-text">
